@@ -1,0 +1,45 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background:  white;
+  margin-top: 0px;
+  margin-right: 0px;
+  height: 80px;
+ 
+}
+
+h2{
+ word-spacing: 5px;
+ letter-spacing: 1px;
+}
+
+.navbar h2 {
+font-size: 22px;
+cursor: pointer;
+color: black;
+margin-left: 130px;
+
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  letter-spacing: 1px;
+  
+}
+
+.nav-links button{
+  border: none;
+  border-radius: 15px;
+  font: Times New Roman;
+  cursor: pointer;
+color: black;
+height: 40px;
+width: 70px;
+background-color: transparent;
+margin-right: 70px;
+
+}
+

@@ -1,0 +1,167 @@
+
+.contact-page {
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  color: white;
+  box-sizing: border-box;
+  padding: 72px 7%;
+}
+
+.infocontactcontainer {
+  max-width: 1248px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 576px;
+  gap: 70px;
+  align-items: start;
+}
+
+
+
+.contactinfo {
+  padding-top: 0;
+  max-width: 550px;
+}
+
+.contactlabel {
+  background-color: #34373a;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 9px 18px;
+  font-size: 11px;
+  margin-bottom: 22px;
+  margin-right: 400px;
+  letter-spacing: 1px;
+}
+
+.contactlabel span {
+  color: #35c8b5;
+  margin-right: 5px;
+}
+.contactinfo h1 {
+  font-size: 65px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  color: white;
+  text-align: left;
+}
+
+.contactinfo h2 {
+  font-size: 45px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 400;
+  line-height: 1;
+  margin: 10px 0 0 0;
+  color: white;
+  text-align: left;
+}
+
+.contactinfo p {
+  font-family: 'Times New Roman', Times, serif;
+  color: #b9b9b9;
+  font-size: 14px;
+  line-height: 2.0;
+  margin-top: 18px;
+  max-width: 540px;
+}
+
+
+
+.contact-right {
+  width: 100%;
+}
+
+.contactcontainer {
+  background-color: #ffffff;
+  color: #202326;
+  border-radius: 24px;
+  padding: 30px 36px;
+  box-sizing: border-box;
+  
+}
+
+.contactcontainer h3 {
+  color: #159f9c;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin: 0 0 10px;
+  
+}
+
+.contactcontainer h4 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0 0 18px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eeeeee;
+
+ 
+}
+
+
+
+
+
+.contact-note {
+  background-color: white;
+  color: #777777;
+  border-radius: 16px;
+  margin-top: 24px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-note span {
+  color: #25b9ad;
+  background-color: #e5f8f5;
+  border-radius: 50%;
+  padding: 9px;
+}
+
+.contact-note p {
+  font-family: monospace;
+  font-size: 11px;
+  line-height: 1.5;
+  margin: 0;
+  color: grey;
+}
+
+
+
+@media (max-width: 900px) {
+  .infocontactcontainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-right {
+    max-width: 576px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-page {
+    padding: 45px 6%;
+  }
+
+  .contactinfo h1,
+  .contactinfo h2 {
+    font-size: 29px;
+  }
+
+  .contactinfo p {
+    font-size: 12px;
+  }
+
+  .contactcontainer {
+    padding: 25px 22px;
+  }
+}
