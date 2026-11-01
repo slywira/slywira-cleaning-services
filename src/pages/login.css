@@ -1,21 +1,29 @@
 .loginpage{
-margin-left: 900px;
-margin-top: 100px;
+
+   display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 200px;
+    box-sizing: border-box;
+    padding: 40px 8%;
 }
 
 .logincontainer{
-background-color: white;
-width: 300px;
-height: 300px;
-border-radius: 10px;
+ background-color: white;
+    width: 350px;
+    min-height: 300px;
+    border-radius: 10px;
+    padding: 25px 20px;
+    box-sizing: border-box;
 }
 
 
-h1{
+ h1{
 color: black;
 font-weight: 600;
 font-family: 'Times New Roman', Times, serif;
-font-size: 14px;
+font-size: 19px;
 padding-top: 10px;
 
 
@@ -25,7 +33,10 @@ h2{
 color: gray;
 font-family: 'Times New Roman', Times, serif;
 font-size: 12px;
+margin-left: 20px;
 }
+
+
 .email{
 background-color: transparent;
 height: 40px;
@@ -76,4 +87,23 @@ h4 span{
 color: blue;
 font-family: 'Times New Roman', Times, serif;
 font-size: 9px;
+}
+
+
+@media (max-width: 900px) {
+    .loginpage {
+        padding: 50px 5%;
+    }
+}
+
+@media (max-width: 600px) {
+    .loginpage {
+        justify-content: flex-end;
+        padding: 35px 5%;
+    }
+
+    .logincontainer {
+        width: 100%;
+        max-width: 350px;
+    }
 }

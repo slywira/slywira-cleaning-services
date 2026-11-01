@@ -1,21 +1,20 @@
 
-
 .about {
- display: grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  align-items: center;
+  gap: 40px;
   width: 100%;
   box-sizing: border-box;
   background-color: #111f2a;
   color: white;
   padding: 70px 7%;
-  margin: 0px;
+  margin: 0;
 }
-
-
 
 .about-intro {
   max-width: 750px;
+  width: 100%;
 }
 
 .aboutusbtn {
@@ -25,8 +24,7 @@
   border-radius: 20px;
   padding: 7px 34px;
   font-size: 12px;
-  margin-bottom: 0px;
-   margin-right: 600px;
+  margin-bottom: 15px;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -39,10 +37,9 @@
 
 .about-intro h1 {
   font-size: 30px;
-  font-weight: 50;
-  margin-right: 550px;
+  font-weight: 400;
+  margin: 0 0 15px;
   color: white;
-  
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -51,70 +48,56 @@
   line-height: 1.7;
   color: #d0d5d9;
   max-width: 500px;
- text-align: left;
-  
+  text-align: left;
   font-family: 'Times New Roman', Times, serif;
 }
 
-.aboutcard img{
-border-radius: 10px;
-height: 300px;
-width: 530px;
-margin-left: -400px;
-margin-top: 20px;
-filter: brightness(0.7);
+.aboutcard {
+  width: 100%;
+}
+
+.aboutcard img {
+  display: block;
+  border-radius: 10px;
+  height: 300px;
+  width: 100%;
+  max-width: 530px;
+  object-fit: cover;
+  margin: 20px auto 0;
+  filter: brightness(0.7);
 }
 
 
+
 .misionandvision {
- 
- display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 185px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
   width: 100%;
   box-sizing: border-box;
   background-color: #111f2a;
   color: white;
-  padding: 70px 2%;
-  margin-top: 10px;
-
-
+  padding: 50px 7%;
+  margin-top: 0;
 }
 
-.mission{
-background-color: lightblue;
-  color: #15232d;
-  border-radius: 18px;
-  padding: 20px 75px;
-  text-align: center;
-   width: 400px;
-   height: 200px;
-   
-  box-sizing: border-box;
-  
-
-}
+.mission,
 .vision {
   background-color: lightblue;
   color: #15232d;
   border-radius: 18px;
-  padding: 20px 75px;
+  padding: 25px;
   text-align: center;
-   width: 400px;
-   height: 200px;
+  width: 100%;
+  min-height: 200px;
   box-sizing: border-box;
-   
-  
 }
-
-
 
 .mission h2,
 .vision h2 {
   font-size: 17px;
   font-weight: 500;
-  
-   margin: 5px 0;
+  margin: 5px 0;
   padding: 3px;
   color: #159f9c;
   letter-spacing: 2px;
@@ -129,26 +112,59 @@ background-color: lightblue;
   padding: 0;
   color: #333;
   font-family: 'Times New Roman', Times, serif;
-  
 }
 
-/* MOBILE RESPONSIVENESS */
 
-@media (max-width: 768px) {
+
+@media (max-width: 900px) {
   .about {
-    padding: 45px 6%;
+    gap: 25px;
+    padding: 50px 5%;
+  }
+
+  .aboutcard img {
+    height: 260px;
+  }
+
+  .misionandvision {
+    gap: 20px;
+    padding: 40px 5%;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .about {
+    grid-template-columns: 1fr;
+    padding: 40px 6%;
+    gap: 25px;
   }
 
   .about-intro h1 {
-    font-size: 32px;
+    font-size: 27px;
   }
 
   .about-intro p {
     font-size: 13px;
   }
 
+  .aboutcard img {
+    height: auto;
+    max-height: 300px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
   .misionandvision {
     grid-template-columns: 1fr;
-    margin-top: 40px;
+    gap: 20px;
+    padding: 30px 6%;
+  }
+
+  .mission,
+  .vision {
+    min-height: 180px;
+    padding: 25px 20px;
   }
 }

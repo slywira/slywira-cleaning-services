@@ -1,87 +1,134 @@
 
 
-.intro{
-margin-top: 120px;
-margin-right: 0px;
-max-width: 750px;
+.intro {
+  margin-top: 120px;
+  margin-left: 7%;
+  max-width: 750px;
+  width: 86%;
+  box-sizing: border-box;
 }
 
-.intro h2{
-color: white;
-font-size: 45px;
-font-family: 'Times New Roman', Times, serif;
-letter-spacing: 0px;
- margin: 2px 82px;
+
+.intro h2 {
+  color: white;
+  font-size: 45px;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 0;
+  margin: 2px 0;
 }
 
-.intro h2 span{
-color:aqua;
-font-size: inherit;
-font-family: inherit;
-
+.intro h2 span {
+  color: aqua;
+  font-size: inherit;
+  font-family: inherit;
 }
 
-p{
-color: white;
-font-size: 22px;
-letter-spacing: 1px;
- line-height: 1.5;
 
+.intro p {
+  color: white;
+  font-size: 22px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 15px 0;
 }
 
-.intro h2{
-margin-right: 130px;
+
+.Book {
+  border: none;
+  border-radius: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  cursor: pointer;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 1px;
+  background-color: lightseagreen;
+  height: 35px;
+  width: 180px;
+  margin-top: 10px;
+  margin-right: 15px;
 }
 
-.intro p{
-margin-right: 0px;
-}
 
-.Book{
-border: none;
-border-radius: 20px;
-font-family: 'Times New Roman', Times, serif;
-cursor: pointer;
-color: white;
-font-size: 10px;
-letter-spacing: 1px;
-background-color: lightseagreen;
-height: 30px;
-width: 180px;
-margin-top: 10px;
-margin-right: 37px;
-}
 
-.view{
-border: 2px solid gray;
-border-radius: 20px;
-font-family: 'Times New Roman', Times, serif;
-cursor: pointer;
-color: white;
-font-size: 10px;
-letter-spacing: 1px;
-background-color: transparent;
-height: 30px;
-width: 180px;
+.view {
+  border: 2px solid gray;
+  border-radius: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  cursor: pointer;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 1px;
+  background-color: transparent;
+  height: 35px;
+  width: 180px;
 }
 
 
 .cleaning {
-border: 2px solid gray;
-border-radius: 20px;
-cursor: pointer;
-color: white;
-letter-spacing: 1px;
-background-color: transparent;
-height: 30px;
-width: 360px;
-margin-right: 37px;
-margin-top: 14px;
-
+  border: 2px solid gray;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+  letter-spacing: 1px;
+  background-color: transparent;
+  min-height: 35px;
+  width: 360px;
+  max-width: 100%;
+  margin-top: 14px;
+  box-sizing: border-box;
 }
 
-.cleaning p{
-font-family: 'Times New Roman', Times, serif;
-font-size: 10px;
+.cleaning p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 10px;
+}
 
+
+@media (max-width: 900px) {
+  .intro {
+    margin-top: 90px;
+    margin-left: 5%;
+    width: 90%;
+  }
+
+  .intro h2 {
+    font-size: 38px;
+  }
+
+  .intro p {
+    font-size: 18px;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .intro {
+    margin-top: 65px;
+    margin-left: 6%;
+    width: 88%;
+  }
+
+  .intro h2 {
+    font-size: 30px;
+  }
+
+  .intro p {
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0;
+  }
+
+  .Book,
+  .view {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 10px 0;
+  }
+
+  .cleaning {
+    width: 100%;
+    max-width: 360px;
+  }
 }

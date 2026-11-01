@@ -32,7 +32,7 @@ home without <br />the hassle.</h2>
          <img src={Homecleaninginfoimage} alt="homecleaning image" /> 
       </div>   
 
-<button className="Bookacleaning" onClick={() => setPage("signup")}
+<button className="Bookacleaning" onClick={() => setPage("login")}
 >Book a cleaning
 </button>
 </div>
