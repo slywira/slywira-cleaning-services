@@ -33,16 +33,16 @@ const [page, setPage] = useState("home");
       }}
     >
        <Navbar navigate={setPage} />
-      {page === "home" && <Home />}
+      {page === "home" && <Home setPage={setPage}/>}
       {page === "services" && <Services setPage={setPage}/>}
       {page === "about" && <About />}
       {page === "contact" && <Contact />}
       {page === "homecleaning" && <Homecleaning setPage={setPage}/>}
-      {page === "officecleaning" && <Officecleaning />}
-      {page === "carpetcleaning" && <Carpetcleaning />}
-      {page === "movingout" && <Movingout />}
-      {page === "login" && <Login />}
-      {page === "signup" && <Signup />}
+      {page === "officecleaning" && <Officecleaning setPage={setPage}/>}
+      {page === "carpetcleaning" && <Carpetcleaning setPage={setPage}/>}
+      {page === "movingout" && <Movingout setPage={setPage}/>}
+      {page === "login" && <Login setPage={setPage}/>}
+      {page === "signup" && <Signup setPage={setPage}/>}
       
     </div>
   );

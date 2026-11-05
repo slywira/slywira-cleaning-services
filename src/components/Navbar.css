@@ -1,95 +1,106 @@
+
 .navbar {
+  width: 100%;
+  min-height: 85px;
+  padding: 0 6%;
+  box-sizing: border-box;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background:  white;
-  margin-top: 0px;
-  margin-right: 0px;
-  height: 80px;
- 
+  align-items: center;
+  background: #111f2a;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  position: relative;
+  z-index: 100;
 }
 
-h2{
- word-spacing: 5px;
- letter-spacing: 1px;
-}
-
+/* Website logo */
 .navbar h2 {
-font-size: 22px;
-cursor: pointer;
-color: black;
-margin-left: 130px;
-
+  font-size: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin: 0;
 }
 
+.navbar h2 span {
+  color: #00d4b5;
+}
+
+/* Navigation links */
 .nav-links {
   display: flex;
-  gap: 10px;
   align-items: center;
-  letter-spacing: 1px;
-  
+  gap: 35px;
 }
 
-.nav-links button{
+.nav-links button {
+  background: none;
   border: none;
-  border-radius: 15px;
-  font: Times New Roman;
+  color: #d5dce1;
+  font-size: 17px;
+  font-family: inherit;
   cursor: pointer;
-color: black;
-height: 40px;
-width: 70px;
-background-color: transparent;
-margin-right: 70px;
-
+  transition: 0.3s;
 }
 
-
-@media (max-width: 900px) {
-    .navbar {
-        padding: 0 3%;
-    }
-
-    .navbar h2 {
-        font-size: 19px;
-    }
-
-    .nav-links {
-        gap: 5px;
-    }
-
-    .nav-links button {
-        margin: 0;
-        font-size: 13px;
-        min-width: 60px;
-    }
+.nav-links button:hover {
+  color: #00d4b5;
 }
 
+/* Book now button */
+.nav-book-button {
+  background: #00d4b5;
+  color: #111f2a;
+  border: none;
+  padding: 12px 23px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-@media (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-        justify-content: center;
-        gap: 10px;
-        padding: 15px 3%;
-        height: auto;
-    }
+.nav-book-button:hover {
+  background: white;
+  transform: translateY(-2px);
+}
 
-    .navbar h2 {
-        font-size: 20px;
-    }
+/* Tablet and mobile */
+@media (max-width: 750px) {
+  .navbar {
+    padding: 18px 5%;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
 
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5px;
-        width: 100%;
-    }
+  .navbar h2 {
+    font-size: 26px;
+  }
 
-    .nav-links button {
-        height: 35px;
-        min-width: auto;
-        padding: 0 10px;
-        font-size: 12px;
-        margin: 0;
-    }
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .nav-links button {
+    font-size: 15px;
+  }
+
+  .nav-book-button {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links button {
+    font-size: 14px;
+  }
 }

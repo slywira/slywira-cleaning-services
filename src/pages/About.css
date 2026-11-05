@@ -18,7 +18,7 @@
 }
 
 .aboutusbtn {
-  background-color: #20b5ad;
+  background-color: aqua;
   color: white;
   border: none;
   border-radius: 20px;
@@ -72,13 +72,15 @@
 .misionandvision {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 30px;
+  gap: 40px;
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
+  padding: 40px 7%;
+  margin: 0 auto;
+
   background-color: #111f2a;
   color: white;
-  padding: 50px 7%;
-  margin-top: 0;
 }
 
 .mission,
@@ -86,11 +88,11 @@
   background-color: lightblue;
   color: #15232d;
   border-radius: 18px;
-  padding: 25px;
+  padding: 35px 40px;
   text-align: center;
   width: 100%;
-  min-height: 200px;
   box-sizing: border-box;
+  min-height: 200px;
 }
 
 .mission h2,

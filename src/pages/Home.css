@@ -1,134 +1,144 @@
 
-
 .intro {
-  margin-top: 120px;
-  margin-left: 7%;
-  max-width: 750px;
-  width: 86%;
+  min-height: calc(100vh - 85px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 40px 20px;
   box-sizing: border-box;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
 }
 
+/* Main introduction */
+.intro-content {
+  max-width: 850px;
+  margin-top: -30px;
+}
+
+.intro-label {
+  color: #00d4b5;
+  font-size: 14px;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+}
 
 .intro h2 {
-  color: white;
-  font-size: 45px;
-  font-family: 'Times New Roman', Times, serif;
-  letter-spacing: 0;
-  margin: 2px 0;
+  font-size: 65px;
+  font-weight: normal;
+  margin: 0 0 20px;
+  letter-spacing: 1px;
+  color: #ffffff;
+   text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.8);
 }
 
 .intro h2 span {
-  color: aqua;
-  font-size: inherit;
+  color: #00d4b5;
+   text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.8);
+}
+
+.intro-description {
+  color: #e0e5e8;
+  font-size: 20px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+/* Buttons */
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.btns button {
+  padding: 15px 28px;
+  font-size: 16px;
   font-family: inherit;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 4px;
 }
 
-
-.intro p {
-  color: white;
-  font-size: 22px;
-  letter-spacing: 1px;
-  line-height: 1.5;
-  margin: 15px 0;
-}
-
-
+/* Book button */
 .Book {
-  border: none;
-  border-radius: 20px;
-  font-family: 'Times New Roman', Times, serif;
-  cursor: pointer;
-  color: white;
-  font-size: 10px;
-  letter-spacing: 1px;
-  background-color: lightseagreen;
-  height: 35px;
-  width: 180px;
-  margin-top: 10px;
-  margin-right: 15px;
+  background: #00d4b5;
+  color: #111f2a;
+  border: 1px solid #00d4b5;
+  font-weight: bold;
 }
 
+.Book:hover {
+  background: white;
+  border-color: white;
+  transform: translateY(-3px);
+}
 
+.Book span {
+  margin-left: 10px;
+  font-size: 19px;
+}
 
+/* View services button */
 .view {
-  border: 2px solid gray;
-  border-radius: 20px;
-  font-family: 'Times New Roman', Times, serif;
-  cursor: pointer;
+  background: transparent;
   color: white;
-  font-size: 10px;
-  letter-spacing: 1px;
-  background-color: transparent;
-  height: 35px;
-  width: 180px;
+  border: 1px solid white;
 }
 
+.view:hover {
+  background: white;
+  color: #111f2a;
+  transform: translateY(-3px);
+}
 
+/* Bottom text */
 .cleaning {
-  border: 2px solid gray;
-  border-radius: 20px;
-  cursor: pointer;
-  color: white;
-  letter-spacing: 1px;
-  background-color: transparent;
-  min-height: 35px;
-  width: 360px;
-  max-width: 100%;
-  margin-top: 14px;
-  box-sizing: border-box;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #b5c0c8;
+  font-size: 12px;
+  letter-spacing: 3px;
 }
 
-.cleaning p {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 10px;
-}
-
-
-@media (max-width: 900px) {
-  .intro {
-    margin-top: 90px;
-    margin-left: 5%;
-    width: 90%;
-  }
-
-  .intro h2 {
-    font-size: 38px;
-  }
-
-  .intro p {
-    font-size: 18px;
-  }
-}
-
-
-
+/* Mobile screens */
 @media (max-width: 600px) {
-  .intro {
-    margin-top: 65px;
-    margin-left: 6%;
-    width: 88%;
-  }
-
   .intro h2 {
-    font-size: 30px;
+    font-size: 40px;
   }
 
-  .intro p {
-    font-size: 15px;
-    line-height: 1.6;
-    letter-spacing: 0;
+  .intro-description {
+    font-size: 16px;
   }
 
-  .Book,
-  .view {
-    display: block;
+  .intro-description br {
+    display: none;
+  }
+
+  .intro-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .btns {
+    flex-direction: column;
     width: 100%;
-    max-width: 250px;
-    margin: 10px 0;
+  }
+
+  .btns button {
+    width: 100%;
+    max-width: 280px;
   }
 
   .cleaning {
-    width: 100%;
-    max-width: 360px;
+    font-size: 10px;
+    letter-spacing: 2px;
   }
 }

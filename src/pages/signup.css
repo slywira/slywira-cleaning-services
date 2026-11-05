@@ -1,0 +1,215 @@
+
+
+.signuppage {
+    min-height: 85vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+
+.signupcontainer {
+    width: 340px;
+    padding: 18px 20px;
+    background: #121F2A;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    transform: translateX(-40px);
+    box-sizing: border-box;
+}
+
+
+
+.signupcontainer h1 {
+    color: white;
+    margin: 0 auto 6px;
+    font-size: 14px;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+.signup-description {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 10px;
+    font-weight: normal;
+    margin: 0 auto 15px;
+    color: #666;
+    line-height: 1.4;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+.signupcontainer .form-heading {
+    color: #aaa;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 10px;
+    font-weight: normal;
+    text-align: left;
+    width: 100%;
+    margin: 0 0 10px;
+}
+
+
+
+.signupcontainer form {
+    width: 100%;
+}
+
+
+
+.signup-input {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0 10px;
+    margin-bottom: 7px;
+
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    box-sizing: border-box;
+
+    background-color: #2A3D5C;
+}
+
+
+
+.signup-input span {
+    color: white;
+    font-size: 12px;
+}
+
+
+
+.signup-input input {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+
+    border: none;
+    outline: none;
+    background: transparent;
+ padding: 13px;
+    color: white;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.signup-input input::placeholder {
+    color: #aaa;
+}
+
+.signup-input:focus-within {
+    border-color: #00D4B5;
+}
+
+
+
+.terms {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 8px 0 15px;
+}
+
+.terms label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #aaa;
+    text-align: left;
+}
+
+.terms input {
+    width: 13px;
+    height: 13px;
+    accent-color: #00D4B5;
+    cursor: pointer;
+}
+
+
+
+.signup {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+
+    background: #1A2340;
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.signup:hover {
+    background: #00D4B5;
+    color: #121F2A;
+}
+
+
+
+.signupcontainer h4 {
+    margin: 15px 0 0;
+    font-size: 11px;
+    color: #aaa;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+.signupcontainer h4 span {
+    color: #00D4B5;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 900px) {
+    .signupcontainer {
+        transform: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .signuppage {
+        min-height: 85vh;
+        padding: 20px;
+    }
+
+    .signupcontainer {
+        width: 100%;
+        max-width: 320px;
+        transform: none;
+    }
+}

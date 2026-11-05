@@ -31,6 +31,7 @@ function About() {
         <div className="aboutcard">
          <img src={aboutimage} alt="about image" /> 
       </div>
+        </div>
 <div className="missionbg">
       <div className="misionandvision">
 
@@ -54,7 +55,7 @@ function About() {
           </p>
         </div>
 </div>
-      </div>
+    
 </div>
     </div>
   );

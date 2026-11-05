@@ -1,110 +1,218 @@
-.homecontainer{
- display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  width: 100%;
-  box-sizing: border-box;
-  background-color: #111f2a;
+
+.homecontainer {
+  min-height: 100vh;
+  background: #111f2a;
   color: white;
-  padding: 40px 1%;
- 
+  padding: 25px 6%;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
 }
 
-
-
-.homecontainer h1{
-font-size: 24px;
-color: white;
-font-family: 'Times New Roman', Times, serif;
-letter-spacing: 3px;
-margin-left: 0px;
-
-
+/* Back link */
+.back-link {
+  color: #00d4b5;
+  cursor: pointer;
+  font-size: 17px;
+  margin-bottom: 30px;
+  display: inline-block;
 }
 
-.homecontainer h2{
-color: aqua;
-font-size: 24px;
-margin-left: 0px;
-letter-spacing: 3px;
-
-
+.back-link span {
+  margin-right: 8px;
+  font-size: 22px;
 }
 
-.homecontainer p{
-color: gray;
-font-size: 13px;
-letter-spacing: 1px;
-justify-items: left;
-
-font-family: 'Times New Roman', Times, serif;
+/* Main content */
+.home-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
 }
 
-ol{
-font-size: 13px;
-letter-spacing: 1px;
-color: gray;
-line-height: 20px;
-list-style: none;
-margin-right: 0px;
-font-family: 'Times New Roman', Times, serif;
+.left {
+  max-width: 600px;
 }
 
-
-
-.homecleaningcard img{
-margin-top: 30px;
-filter: brightness(0.8);
+.home-label {
+  color: #00d4b5;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 15px;
 }
 
-.Bookacleaning{
-color: white;
-background-color: darkcyan;
-height: 34px;
-width: 120px;
-border-radius: 10px;
-font-family: 'Times New Roman', Times, serif;
-font-size: 12px;
-font-weight: 800;
-margin-top: 7px;
-cursor: pointer;
+.left h1 {
+  font-size: 42px;
+  margin: 0 0 15px;
+  line-height: 1.15;
 }
 
-/* TABLET */
-@media (max-width: 900px) {
-    .homecontainer {
-        gap: 20px;
-        padding: 30px 5%;
-    }
-
-    .homecleaningcard img {
-        height: 280px;
-    }
+.left h2 {
+  color: #00d4b5;
+  font-size: 25px;
+  margin-bottom: 20px;
 }
 
+.home-description {
+  color: #b5c0c8;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
 
-@media (max-width: 600px) {
-    .homecontainer {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 25px 6%;
-    }
+/* Services list */
+.home-services {
+  margin-top: 20px;
+}
 
-    .homecontainer h1 {
-        font-size: 21px;
-    }
+.home-services h3 {
+  font-size: 21px;
+  margin-bottom: 15px;
+}
 
-    .homecontainer h2 {
-        font-size: 20px;
-    }
+.home-services ul {
+  padding-left: 22px;
+  color: #b5c0c8;
+  line-height: 1.9;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
 
-    .homecleaningcard img {
-        height: auto;
-        max-height: 300px;
-        margin-top: 10px;
-    }
+.home-services li::marker {
+  color: #00d4b5;
+}
 
-    .Bookacleaning {
-        width: 150px;
-    }
+/* Mobile image */
+.mobile-image {
+  display: none;
+}
+
+/* Booking button */
+.Bookacleaning {
+  background: #00d4b5;
+  color: #111f2a;
+  border: none;
+  padding: 15px 28px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.Bookacleaning:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+
+.Bookacleaning span {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.home-note {
+  color: #b5c0c8;
+  font-style: italic;
+  margin-top: 18px;
+}
+
+/* Right-side image */
+.homecleaningcard {
+  position: relative;
+  height: 570px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.homecleaningcard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-image-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 35px 25px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+}
+
+.home-image-text h2 {
+  font-size: 27px;
+  margin-bottom: 8px;
+}
+
+.home-image-text p {
+  color: #e0e0e0;
+  font-size: 16px;
+}
+
+/* Footer */
+.home-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 40px;
+  padding-top: 18px;
+  text-align: center;
+  color: #b5c0c8;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+/* Tablet and mobile screens */
+@media (max-width: 850px) {
+  .home-content {
+    grid-template-columns: 1fr;
+  }
+
+  .homecleaningcard {
+    display: none;
+  }
+
+  .mobile-image {
+    display: block;
+    margin-top: 25px;
+  }
+
+  .mobile-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .left h1 {
+    font-size: 34px;
+  }
+
+  .home-services ul {
+    grid-template-columns: 1fr;
+  }
+
+  .Bookacleaning {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .homecontainer {
+    padding: 20px 5%;
+  }
+
+  .left h1 {
+    font-size: 30px;
+  }
+
+  .left h2 {
+    font-size: 22px;
+  }
+
+  .home-description {
+    font-size: 16px;
+  }
 }

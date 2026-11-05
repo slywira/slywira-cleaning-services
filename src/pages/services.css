@@ -1,168 +1,167 @@
-.header {
-  text-align: center;
-  margin-bottom: 40px;
-  color: white;
-  font-weight: bold;
-  font-family: 'Times New Roman', Times, serif;
-  background:#121F2A;
-  
 
-}
-
-h2{
-font-size: 40px;
-margin-left: 220px;
-font-family: 'Times New Roman', Times, serif;
-
-}
-
-h2 span {
-  color: #00BFFF;
-  font-size: 80px;
-  margin-right: 5px;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-.servicecontainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 35px;
-  width: 100%;
+.services-page {
   min-height: 100vh;
-  padding: 40px 6%;
-  box-sizing: border-box;
-  
-  background:#121F2A;
-  padding: 40px 200px;
-  
-
-}
-
-
-.servicecard {
-  width: 100%;
-  height: auto;
-  background:#1A2634;
- border:1px solid #2A3B4F;
- border-radius: 16px;
-
-}
-
-.servicecard img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  display: block;
-  border-radius: 8px;
-  filter: brightness(0.8);
-  cursor: pointer;
-
-}
-
-  
-.servicecard img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-}
-
-.servicecard h1 {
-  font-size: 20px;
- margin: 2px;
+  background: #111f2a;
   color: white;
-  text-align: 10px;
-  font-family: 'Times New Roman', Times, serif;
-  letter-spacing: 2px;
+  padding: 50px 6%;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
 }
 
-h1 span {
-  color: #00BFFF;
-  font-size: 25px;
-  margin-right: 2px;
-  margin-left: -120px;
-  font-family: 'Times New Roman', Times, serif;
+/* Heading */
+.services-heading {
+  text-align: center;
+  margin-bottom: 45px;
 }
-.servicecard p {
-  font-size: 11px;
-  line-height: 1.5;
-  color: lightgrey;
-  font-family: 'Times New Roman', Times, serif;
-  letter-spacing: 2px;
+
+.services-heading p {
+  color: #00d4b5;
+  font-size: 13px;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.services-heading h2 {
+  font-size: 42px;
   margin: 0;
 }
 
-
-@media screen and (max-width: 900px) {
-    .servicecontainer {
-        gap: 20px;
-        padding: 30px 4%;
-    }
-
-    .servicecard img {
-        height: 250px;
-    }
-
-    .header h2 {
-        font-size: 34px;
-    }
-
-    .header h2 span {
-        font-size: 48px;
-    }
+.services-heading h2 span {
+  color: #00d4b5;
 }
 
-
-@media screen and (max-width: 600px) {
-    .header {
-        padding: 25px 5%;
-    }
-
-    .header h2 {
-        font-size: 26px;
-    }
-
-    .header h2 span {
-        font-size: 36px;
-    }
-
-    .servicecontainer {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        padding: 25px 5%;
-    }
-
-    .servicecard img {
-        height: 230px;
-    }
-
-    .servicecard h1 {
-        font-size: 18px;
-    }
-
-    .servicecard h1 span {
-        font-size: 21px;
-    }
-
-    .servicecard p {
-        font-size: 12px;
-        letter-spacing: 0.5px;
-    }
+.services-heading h3 {
+  color: #b5c0c8;
+  font-size: 19px;
+  font-weight: normal;
+  margin-top: 12px;
 }
 
+/* Service cards layout */
+.servicecontainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1150px;
+  margin: auto;
+}
 
-@media screen and (max-width: 380px) {
-    .header h2 {
-        font-size: 22px;
-    }
+/* Individual card */
+.servicecard {
+  background: #172936;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
 
-    .header h2 span {
-        font-size: 30px;
-    }
+.servicecard:hover {
+  transform: translateY(-7px);
+  border-color: #00d4b5;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
 
-    .servicecard img {
-        height: 190px;
-    }
+/* Image */
+.service-image {
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
 
-    .servicecard h1 {
-        font-size: 16px;
-    }
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.servicecard:hover .service-image img {
+  transform: scale(1.05);
+}
+
+/* Number on image */
+.service-number {
+  position: absolute;
+  top: 15px;
+  left: 18px;
+  background: #00d4b5;
+  color: #111f2a;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Card information */
+.service-info {
+  padding: 22px 25px 25px;
+}
+
+.service-info h1 {
+  font-size: 25px;
+  margin: 0 0 12px;
+}
+
+.service-info p {
+  color: #b5c0c8;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.service-link {
+  color: #00d4b5;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Footer */
+.services-footer {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 50px;
+  padding-top: 20px;
+  color: #b5c0c8;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+  .servicecontainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .service-image {
+    height: 200px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+  .services-page {
+    padding: 35px 5%;
+  }
+
+  .services-heading h2 {
+    font-size: 32px;
+  }
+
+  .services-heading h3 {
+    font-size: 16px;
+  }
+
+  .servicecontainer {
+    grid-template-columns: 1fr;
+  }
+
+  .service-image {
+    height: 230px;
+  }
+
+  .service-info h1 {
+    font-size: 23px;
+  }
 }
