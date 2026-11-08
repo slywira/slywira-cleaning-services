@@ -204,6 +204,20 @@
     padding: 20px 5%;
   }
 
+  @media (max-width: 360px) {
+    .homecontainer {
+      padding: 20px 16px;
+    }
+
+    .left h1 {
+      font-size: 27px;
+    }
+
+    .home-description {
+      overflow-wrap: anywhere;
+    }
+  }
+
   .left h1 {
     font-size: 30px;
   }

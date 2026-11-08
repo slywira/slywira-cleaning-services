@@ -3,11 +3,11 @@
   min-height: calc(100vh - 85px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
   position: relative;
-  padding: 40px 20px;
+  padding: 80px clamp(16px, 12vw, 170px);
   box-sizing: border-box;
   color: white;
   font-family: "Times New Roman", Times, serif;
@@ -16,6 +16,7 @@
 /* Main introduction */
 .intro-content {
   max-width: 850px;
+  width: 100%;
   margin-top: -30px;
 }
 
@@ -27,7 +28,7 @@
 }
 
 .intro h2 {
-  font-size: 65px;
+  font-size: clamp(34px, 7.5vw, 65px);
   font-weight: normal;
   margin: 0 0 20px;
   letter-spacing: 1px;
@@ -50,8 +51,9 @@
 /* Buttons */
 .btns {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
   gap: 20px;
 }
 
@@ -111,7 +113,7 @@
 /* Mobile screens */
 @media (max-width: 600px) {
   .intro h2 {
-    font-size: 40px;
+    font-size: clamp(32px, 9vw, 40px);
   }
 
   .intro-description {
@@ -129,16 +131,40 @@
 
   .btns {
     flex-direction: column;
-    width: 100%;
+    align-items: flex-start;
   }
 
   .btns button {
     width: 100%;
     max-width: 280px;
+    box-sizing: border-box;
   }
 
   .cleaning {
     font-size: 10px;
     letter-spacing: 2px;
+  }
+
+}
+
+@media (max-width: 360px) {
+  .intro {
+    padding: 56px 16px 70px;
+  }
+
+  .intro-content {
+    margin-top: 0;
+  }
+
+  .intro-label {
+    letter-spacing: 2px;
+  }
+
+  .intro-description {
+    font-size: 15px;
+  }
+
+  .cleaning {
+    letter-spacing: 1px;
   }
 }

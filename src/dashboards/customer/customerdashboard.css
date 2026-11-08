@@ -1,0 +1,796 @@
+
+.customer-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f6f8;
+}
+
+.customer-main {
+  flex: 1;
+  min-width: 0;
+  padding: 30px;
+  color: #111f2a;
+}
+
+.customer-header {
+  margin-bottom: 35px;
+}
+
+.customer-header h1 {
+  font-size: 28px;
+  margin: 0 0 8px;
+}
+
+.customer-header p {
+  color: #667085;
+  margin: 0;
+}
+
+.customer-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.customer-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.customer-card h3 {
+  font-size: 14px;
+  color: #667085;
+}
+
+.customer-card h2 {
+  font-size: 30px;
+  color: #14a99a;
+  margin-bottom: 8px;
+}
+
+.customer-card p {
+  font-size: 13px;
+  color: #667085;
+}
+
+.customer-welcome,
+.customer-content {
+  background-color: white;
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.customer-welcome p,
+.customer-content p {
+  color: #667085;
+  line-height: 1.7;
+}
+
+.customer-welcome button {
+  background-color: #14b8a6;
+  color: #111f2a;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.customer-welcome button:hover {
+  background-color: #0d9488;
+  color: #111f2a;
+}
+
+.booking-form {
+  background: #ffffff;
+  border: 1px solid #e4e7ec;
+  border-radius: 12px;
+  padding: 22px;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+.booking-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.booking-form textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.booking-submit-btn {
+  background: #14b8a6;
+  color: #111f2a;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.customer-message {
+  color: #0b6a5c;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.booking-list,
+.customer-payment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.customer-booking-item,
+.customer-payment-item,
+.profile-card {
+  background: #ffffff;
+  border: 1px solid #e4e7ec;
+  border-radius: 10px;
+  padding: 16px 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.customer-booking-item h3,
+.customer-payment-item h3 {
+  margin: 0 0 6px;
+  color: #111f2a;
+}
+
+.customer-booking-item p,
+.customer-payment-item p,
+.profile-card p {
+  margin: 0;
+  color: #667085;
+}
+
+.payment-status {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.payment-status.paid {
+  color: #065f46;
+  background: #d1fae5;
+  border-radius: 999px;
+  padding: 4px 8px;
+}
+
+.payment-status.pending {
+  color: #92400e;
+  background: #fef3c7;
+  border-radius: 999px;
+  padding: 4px 8px;
+}
+
+.profile-card {
+  display: block;
+}
+
+.profile-card p + p {
+  margin-top: 12px;
+}
+
+.customer-content {
+  border: 1px solid #e8edf0;
+  box-shadow: 0 12px 32px rgba(17, 31, 42, 0.05);
+}
+
+.customer-section-heading,
+.customer-list-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.customer-section-heading h2 {
+  color: #111f2a;
+  font-size: 25px;
+  margin: 3px 0 6px;
+}
+
+.customer-section-heading p,
+.customer-list-heading p {
+  margin: 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+.customer-eyebrow {
+  color: #12877c !important;
+  font-size: 11px !important;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.customer-count {
+  background: #e8f7f4;
+  border-radius: 999px;
+  color: #087c70;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+
+.booking-form {
+  margin-top: 24px;
+  padding: 24px;
+  background: #f9fbfb;
+}
+
+.booking-form h3,
+.customer-list-heading h3 {
+  color: #172936;
+  font-size: 17px;
+  margin: 0 0 17px;
+}
+
+.booking-form-grid label,
+.booking-address {
+  color: #475467;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  font-weight: 650;
+  gap: 8px;
+}
+
+.moving-extras-fieldset {
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  grid-column: 1 / -1;
+  padding: 14px;
+}
+
+.moving-extras-fieldset legend {
+  color: #475467;
+  font-size: 13px;
+  font-weight: 650;
+  padding: 0 6px;
+}
+
+.moving-extra-option {
+  align-items: center;
+  color: #475467;
+  display: flex;
+  font-size: 13px;
+  gap: 9px;
+}
+
+.booking-form .moving-extra-option input {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.moving-price-note {
+  color: #667085;
+  font-size: 13px;
+  margin: 8px 0 0;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  background: #fff;
+  font-size: 14px;
+}
+
+.booking-address {
+  margin-top: 16px;
+}
+
+.booking-price-quote {
+  margin: 16px 0 0;
+  color: #475467;
+}
+
+.booking-price-quote strong {
+  color: #142a36;
+}
+
+.booking-submit-btn {
+  align-items: center;
+  display: inline-flex;
+  gap: 12px;
+  justify-content: center;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.booking-submit-btn:hover {
+  background: #0d9488;
+  color: #111f2a;
+  transform: translateY(-1px);
+}
+
+.customer-list-heading {
+  align-items: flex-end;
+  margin: 28px 0 14px;
+}
+
+.customer-list-heading h3 {
+  margin-bottom: 5px;
+}
+
+.customer-booking-list,
+.customer-payment-list {
+  display: grid;
+  gap: 12px;
+}
+
+.customer-booking-item,
+.customer-payment-item {
+  border-color: #e8edf0;
+  box-shadow: 0 3px 12px rgba(17, 31, 42, 0.03);
+  justify-content: flex-start;
+}
+
+.customer-booking-icon,
+.payment-method-icon,
+.payment-summary-icon,
+.profile-detail-icon {
+  align-items: center;
+  background: #e8f7f4;
+  border-radius: 12px;
+  color: #087c70;
+  display: flex;
+  flex: 0 0 44px;
+  font-size: 20px;
+  height: 44px;
+  justify-content: center;
+}
+
+.customer-booking-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.customer-booking-title {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.customer-booking-item .customer-booking-title h3,
+.customer-payment-item h3 {
+  font-size: 15px;
+  margin: 0;
+}
+
+.customer-booking-item .customer-booking-details p,
+.customer-payment-item .customer-payment-details p {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.customer-booking-price,
+.customer-payment-amount {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.customer-booking-price span,
+.customer-booking-price small {
+  color: #667085;
+  font-size: 11px;
+}
+
+.customer-booking-price strong,
+.customer-payment-amount strong {
+  color: #142a36;
+  font-size: 15px;
+}
+
+.booking-status {
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 5px 9px;
+}
+
+.booking-status.rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.payment-summary-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 25px;
+}
+
+.payment-summary-card {
+  align-items: center;
+  background: #f3fbf9;
+  border: 1px solid #dff3ef;
+  border-radius: 12px;
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+}
+
+.payment-summary-card.pending {
+  background: #fffaf0;
+  border-color: #f6e8c8;
+}
+
+.payment-summary-card.pending .payment-summary-icon {
+  background: #fff0cf;
+  color: #9a6714;
+}
+
+.payment-summary-card p {
+  color: #667085;
+  font-size: 13px;
+  margin: 0 0 5px;
+}
+
+.payment-summary-card h3 {
+  color: #152b36;
+  font-size: 20px;
+  margin: 0;
+}
+
+.customer-payment-item {
+  display: flex;
+}
+
+.customer-payment-details {
+  flex: 1;
+}
+
+.payment-status {
+  border-radius: 999px;
+  font-weight: 700;
+  margin: 0;
+  padding: 5px 9px;
+}
+
+.payment-status.failed,
+.payment-status.rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.payment-note {
+  font-size: 13px;
+  margin-top: 22px;
+}
+
+.customer-empty-state {
+  align-items: center;
+  background: #f9fbfb;
+  border: 1px dashed #d0dce0;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 36px 20px;
+  text-align: center;
+}
+
+.customer-empty-state > span {
+  align-items: center;
+  background: #e8f7f4;
+  border-radius: 50%;
+  color: #087c70;
+  display: flex;
+  font-size: 22px;
+  height: 48px;
+  justify-content: center;
+  width: 48px;
+}
+
+.customer-empty-state h3 {
+  color: #172936;
+  margin: 14px 0 5px;
+}
+
+.customer-empty-state p {
+  margin: 0;
+}
+
+.customer-profile-card {
+  border: 1px solid #e8edf0;
+  border-radius: 14px;
+  margin-top: 24px;
+  overflow: hidden;
+}
+
+.customer-profile-banner {
+  background: linear-gradient(110deg, #102d39, #1d5b5c 65%, #1d897e);
+  height: 108px;
+}
+
+.customer-profile-main {
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  margin: -29px 24px 20px;
+  position: relative;
+}
+
+.customer-avatar {
+  align-items: center;
+  background: #c8f2e8;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  color: #087c70;
+  display: flex;
+  font-size: 18px;
+  font-weight: 800;
+  height: 62px;
+  justify-content: center;
+  width: 62px;
+}
+
+.customer-profile-title h3 {
+  color: #172936;
+  font-size: 18px;
+  margin: 19px 0 4px;
+}
+
+.customer-profile-title p {
+  font-size: 13px;
+  margin: 0;
+}
+
+.customer-profile-details {
+  border-top: 1px solid #edf2f4;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 21px 24px 24px;
+}
+
+.profile-detail {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  min-width: 0;
+}
+
+.profile-detail-icon {
+  flex-basis: 38px;
+  font-size: 16px;
+  height: 38px;
+}
+
+.profile-detail div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.profile-detail div span {
+  color: #667085;
+  font-size: 12px;
+}
+
+.profile-detail strong {
+  color: #172936;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.profile-help-card {
+  align-items: center;
+  background: #f3fbf9;
+  border: 1px solid #dff3ef;
+  border-radius: 12px;
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  margin-top: 18px;
+  padding: 18px 20px;
+}
+
+.profile-help-card h3 {
+  color: #172936;
+  font-size: 15px;
+  margin: 0 0 5px;
+}
+
+.profile-help-card p {
+  font-size: 13px;
+  margin: 0;
+}
+
+.profile-help-card a {
+  color: #087c70;
+  font-size: 13px;
+  font-weight: 750;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.profile-help-card a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .customer-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .booking-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .customer-dashboard {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    text-align: left;
+  }
+
+  .customer-sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .customer-main {
+    width: 100%;
+    min-width: 0;
+    padding: 16px 14px 28px;
+  }
+
+  .customer-header {
+    margin-bottom: 20px;
+  }
+
+  .customer-header h1 {
+    font-size: 24px;
+  }
+
+  .customer-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .customer-card {
+    padding: 18px;
+  }
+
+  .customer-welcome,
+  .customer-content {
+    margin-top: 16px;
+    padding: 16px;
+  }
+
+  .customer-section-heading h2 {
+    font-size: 21px;
+  }
+
+  .booking-form {
+    padding: 16px;
+  }
+
+  .booking-form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .booking-form-grid > *,
+  .booking-address {
+    min-width: 0;
+  }
+
+  .booking-submit-btn {
+    width: 100%;
+  }
+
+  .customer-booking-item,
+  .customer-payment-item {
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr);
+    align-items: start;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .customer-booking-icon,
+  .payment-method-icon {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .customer-booking-details,
+  .customer-payment-details {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .customer-booking-price,
+  .customer-payment-amount {
+    align-items: flex-start;
+    grid-column: 2;
+    margin-left: 0;
+    white-space: normal;
+  }
+
+  .customer-booking-price strong,
+  .customer-payment-amount strong {
+    overflow-wrap: anywhere;
+  }
+
+  .customer-profile-details {
+    gap: 18px;
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+
+  .payment-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .customer-section-heading,
+  .profile-help-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .profile-help-card a {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 360px) {
+  .customer-main {
+    padding: 12px 10px 24px;
+  }
+
+  .customer-welcome,
+  .customer-content {
+    padding: 12px;
+  }
+
+  .booking-form {
+    padding: 12px;
+  }
+
+  .customer-section-heading {
+    gap: 10px;
+  }
+
+  .customer-count {
+    white-space: normal;
+  }
+
+  .customer-empty-state {
+    padding: 24px 12px;
+  }
+}

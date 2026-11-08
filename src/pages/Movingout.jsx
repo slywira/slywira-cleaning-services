@@ -1,6 +1,7 @@
 
 import "./Movingout.css";
 import Movingoutimage from "../assets/movingout.png";
+import { MOVE_OUT_ADDITIONAL_SERVICES, MOVE_OUT_HOUSE_PRICES } from "../utils/movingPrices";
 
 function Movingout({ setPage }) {
   return (
@@ -82,7 +83,37 @@ function Movingout({ setPage }) {
 
       </div>
 
-     
+      <section className="moving-price-guide">
+        <h2>Indicative House Moving Prices</h2>
+        <p>
+          Suggested prices for local moves within Nairobi. The final price is confirmed
+          after assessing the distance and belongings.
+        </p>
+        <ul>
+          {MOVE_OUT_HOUSE_PRICES.map((item) => (
+            <li key={item.id}>
+              <span>{item.label}</span>
+              <strong>
+                KSh {item.minimum.toLocaleString()}–{item.maximum.toLocaleString()}
+                {item.maximumPlus ? "+" : ""}
+              </strong>
+            </li>
+          ))}
+        </ul>
+
+        <h3>Additional Moving Services</h3>
+        <ul>
+          {MOVE_OUT_ADDITIONAL_SERVICES.map((item) => (
+            <li key={item.id}>
+              <span>{item.label}</span>
+              <strong>
+                KSh {item.minimum.toLocaleString()}–{item.maximum.toLocaleString()}
+              </strong>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <div className="moving-footer">
         <p>SLYWIRA.</p>
         <p>Cleaning and Property Services | Kenya</p>

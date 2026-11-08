@@ -13,7 +13,7 @@
 
 
 .signupcontainer {
-    width: 340px;
+    width: min(100%, 380px);
     padding: 18px 20px;
     background: #121F2A;
     border-radius: 10px;
@@ -62,7 +62,7 @@
     font-family: 'Times New Roman', Times, serif;
     font-size: 10px;
     font-weight: normal;
-    text-align: left;
+    text-align: center;
     width: 100%;
     margin: 0 0 10px;
 }
@@ -183,6 +183,7 @@
     color: #aaa;
     font-family: 'Times New Roman', Times, serif;
     font-weight: normal;
+    text-align: center;
 }
 
 .signupcontainer h4 span {
@@ -191,8 +192,6 @@
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
 }
-
-
 
 @media (max-width: 900px) {
     .signupcontainer {
@@ -204,12 +203,38 @@
 @media (max-width: 600px) {
     .signuppage {
         min-height: 85vh;
-        padding: 20px;
+        padding: 20px 16px;
     }
 
     .signupcontainer {
         width: 100%;
-        max-width: 320px;
+        max-width: 400px;
         transform: none;
+    }
+
+    .signupcontainer h1,
+    .signup-description,
+    .signupcontainer h4 {
+        text-align: center;
+    }
+
+    .terms label {
+        align-items: flex-start;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 360px) {
+    .signuppage {
+        padding: 16px;
+    }
+
+    .signupcontainer {
+        padding: 18px 16px;
+    }
+
+    .signupcontainer h1 {
+        font-size: 13px;
+        letter-spacing: 1px;
     }
 }

@@ -1,0 +1,34 @@
+.admin-services {
+  color: #172936;
+}
+
+.admin-moving-price-guide {
+  border-top: 1px solid #e4e7ec;
+  margin-top: 30px;
+  padding-top: 22px;
+}
+
+.admin-moving-price-guide h3 {
+  color: #142a36;
+  margin: 0 0 8px;
+}
+
+.admin-moving-price-guide h4 {
+  color: #142a36;
+  margin: 24px 0 12px;
+}
+
+.admin-price-note {
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0 0 14px;
+}
+
+.admin-services .admin-table {
+  min-width: 540px;
+}
+
+.admin-services .admin-table td {
+  line-height: 1.55;
+}

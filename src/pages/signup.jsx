@@ -9,7 +9,6 @@ function Signup({ setPage }) {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -27,48 +26,48 @@ function Signup({ setPage }) {
       return;
     }
 
-    const supabase = getSupabaseClient();
-    if (!supabase) {
-      setMessage("Account creation is not configured. Please contact the site owner.");
-      return;
-    }
-
     setLoading(true);
 
     try {
-      const { data, error } = await supabase.auth.signUp({
-        email: email.trim(),
-        password: password,
-        options: {
-          data: {
-            full_name: fullName.trim(),
-            phone: phone.trim()
-          }
-        }
-      });
-
-      if (error) {
-        setMessage(error.message);
+      const supabase = getSupabaseClient();
+      if (!supabase) {
+        setMessage("Account creation is unavailable because Supabase is not configured.");
         return;
       }
 
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          data: {
+            full_name: fullName.trim(),
+            phone: phone.trim(),
+            role: "customer",
+          },
+        },
+      });
+      if (error) throw error;
+
       if (data.session) {
-        setMessage("Account created successfully! You can now log in.");
-      } else {
-        setMessage(
-          "Account created! Please check your email to confirm your account."
-        );
+        const { error: profileError } = await supabase.rpc("ensure_my_profile");
+        if (profileError) {
+          setMessage(
+            `Your account was created, but its customer profile could not be saved: ${profileError.message}. Run supabase/profile-recovery.sql in the Supabase SQL Editor.`
+          );
+          return;
+        }
       }
 
+      setMessage("Account created. Check your email to confirm your account, then log in.");
       setFullName("");
       setEmail("");
       setPhone("");
       setPassword("");
       setConfirmPassword("");
 
+      setTimeout(() => setPage("login"), 900);
     } catch (error) {
-      setMessage("Something went wrong. Please try again.");
-
+      setMessage(error instanceof Error ? error.message : "Account creation failed. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -76,21 +75,15 @@ function Signup({ setPage }) {
 
   return (
     <div className="signuppage">
-
       <div className="signup-overlay"></div>
 
       <div className="signupcontainer">
-
         <h1>CREATE YOUR ACCOUNT</h1>
 
-        <p className="signup-description">
-          Book and Manage your services easily
-        </p>
-
+        <p className="signup-description">Book and Manage your services easily</p>
         <h3 className="form-heading">CREATE AN ACCOUNT</h3>
 
         <form onSubmit={handleSignup}>
-
           <div className="signup-input">
             <input
               type="text"
@@ -155,22 +148,23 @@ function Signup({ setPage }) {
             </p>
           )}
 
-          <button
-            type="submit"
-            className="signup"
-            disabled={loading}
-          >
+          <button type="submit" className="signup" disabled={loading}>
             {loading ? "CREATING ACCOUNT..." : "CREATE ACCOUNT"}
             {!loading && <span> ➜</span>}
           </button>
-
         </form>
 
         <h4>
           Already have an account?
-          <span onClick={() => setPage("login")}> Login</span>
+          {" "}
+          <button
+            type="button"
+            className="auth-inline-button"
+            onClick={() => setPage("login")}
+          >
+            Login
+          </button>
         </h4>
-
       </div>
     </div>
   );

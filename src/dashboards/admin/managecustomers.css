@@ -1,0 +1,145 @@
+.admin-customers {
+  color: #172936;
+}
+
+.admin-customers .admin-table {
+  min-width: 650px;
+}
+
+.admin-customers .admin-table tbody tr:hover {
+  background: #f8fbfb;
+}
+
+.admin-customers .admin-table td:first-child {
+  color: #142a36;
+  font-weight: 650;
+}
+
+.admin-customer-details-button,
+.admin-customer-details-close {
+  border: 0;
+  border-radius: 6px;
+  background: #142a36;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+
+.admin-customer-details-button:hover,
+.admin-customer-details-close:hover {
+  background: #1d4353;
+}
+
+.admin-customer-details {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #e1e9ec;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(20, 42, 54, 0.06);
+}
+
+.admin-customer-details-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e9eef0;
+}
+
+.admin-customer-details-heading h3,
+.admin-customer-history h4 {
+  margin: 0;
+  color: #142a36;
+}
+
+.admin-customer-details-heading p {
+  margin: 6px 0 0;
+  color: #667085;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.admin-customer-contact {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 16px 0 22px;
+}
+
+.admin-customer-contact div {
+  min-width: 0;
+}
+
+.admin-customer-contact dt {
+  margin-bottom: 4px;
+  color: #667085;
+  font-size: 12px;
+}
+
+.admin-customer-contact dd {
+  margin: 0;
+  color: #172936;
+  overflow-wrap: anywhere;
+}
+
+.admin-customer-history + .admin-customer-history {
+  margin-top: 22px;
+}
+
+.admin-customer-history h4 {
+  margin-bottom: 10px;
+}
+
+.admin-customer-history > p {
+  color: #667085;
+  font-size: 13px;
+}
+
+.admin-customer-data-error {
+  color: #a4262c;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.admin-customer-history-list {
+  display: grid;
+  gap: 10px;
+}
+
+.admin-customer-history-list article {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 16px;
+  padding: 12px;
+  border: 1px solid #e9eef0;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.admin-customer-history-list strong {
+  color: #142a36;
+}
+
+.admin-customer-history-list span {
+  color: #53636b;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .admin-customers .admin-table {
+    min-width: 650px;
+  }
+
+  .admin-customer-details {
+    padding: 15px;
+  }
+
+  .admin-customer-contact,
+  .admin-customer-history-list article {
+    grid-template-columns: 1fr;
+  }
+}

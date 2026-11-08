@@ -5,7 +5,14 @@ function Navbar({ navigate = () => {} }) {
   return (
     <nav className="navbar">
 
-      <h2 onClick={() => navigate("home")}>
+      <h2
+        role="button"
+        tabIndex={0}
+        onClick={() => navigate("home")}
+        onKeyDown={(event) => {
+          if (event.key === "Enter" || event.key === " ") navigate("home");
+        }}
+      >
         Slywira<span>.</span>
       </h2>
 

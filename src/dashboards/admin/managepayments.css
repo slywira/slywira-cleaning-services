@@ -1,0 +1,59 @@
+.admin-payments {
+  color: #172936;
+}
+
+.admin-payment-summary {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 22px;
+}
+
+.admin-payment-summary article {
+  background: #f3fbf9;
+  border: 1px solid #dff3ef;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 18px;
+}
+
+.admin-payment-summary article span {
+  color: #667085;
+  font-size: 13px;
+}
+
+.admin-payment-summary article strong {
+  color: #142a36;
+  font-size: 20px;
+}
+
+.admin-payments .admin-table {
+  min-width: 650px;
+}
+
+.admin-payment-status {
+  border-radius: 999px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 9px;
+  text-transform: capitalize;
+}
+
+.admin-payment-status.paid {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.admin-payment-status.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+@media (max-width: 600px) {
+  .admin-payment-summary {
+    grid-template-columns: 1fr;
+  }
+}

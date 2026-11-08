@@ -165,3 +165,26 @@
     font-size: 23px;
   }
 }
+
+@media (max-width: 360px) {
+  .services-page {
+    padding: 28px 16px;
+  }
+
+  .services-heading {
+    margin-bottom: 30px;
+  }
+
+  .services-heading p {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .services-heading h2 {
+    font-size: 28px;
+  }
+
+  .service-info {
+    padding: 18px;
+  }
+}

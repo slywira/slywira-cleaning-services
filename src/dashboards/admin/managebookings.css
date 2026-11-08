@@ -1,0 +1,124 @@
+
+.manage-bookings {
+  width: 100%;
+}
+
+.booking-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.booking-heading p {
+  color: #667085;
+}
+
+.booking-heading button {
+  background: #14b8a6;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.booking-table-container {
+  overflow-x: auto;
+  background: white;
+  border-radius: 10px;
+}
+
+.booking-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.booking-table th,
+.booking-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+.booking-table th {
+  background: #111f2a;
+  color: white;
+}
+
+.booking-table select {
+  padding: 7px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.booking-extra-services {
+  margin: 4px 0 0;
+  padding-left: 18px;
+}
+
+.booking-price-note {
+  color: #667085;
+  font-size: 11px;
+  margin-top: 4px;
+  max-width: 180px;
+}
+
+.booking-status {
+  padding: 6px 10px;
+  border-radius: 5px;
+  background: #eee;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.booking-status.confirmed {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.booking-status.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.booking-status.rejected,
+.booking-status.cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.booking-status.completed {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.booking-message {
+  margin: 15px 0;
+}
+
+@media (max-width: 700px) {
+  .booking-heading {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .booking-heading button {
+    min-height: 42px;
+  }
+
+  .booking-table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .booking-table th,
+  .booking-table td {
+    padding: 11px 10px;
+  }
+}

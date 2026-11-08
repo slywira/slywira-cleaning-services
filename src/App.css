@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
- 
+  box-sizing: border-box;
 }
 
 #root {
@@ -16,4 +16,11 @@ width: 100%;
 min-height: 100vh;
 background-repeat: no-repeat;
 
+}
+.auth-connection-error {
+  background: #fee2e2;
+  color: #991b1b;
+  margin: 0;
+  padding: 12px 20px;
+  text-align: center;
 }

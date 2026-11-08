@@ -7,8 +7,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #111f2a;
-  color: white;
+  background: white;
+  color: black;
   font-family: "Times New Roman", Times, serif;
   position: relative;
   z-index: 100;
@@ -20,6 +20,7 @@
   letter-spacing: 1px;
   cursor: pointer;
   margin: 0;
+  color: black;
 }
 
 .navbar h2 span {
@@ -30,13 +31,13 @@
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: clamp(16px, 3vw, 35px);
 }
 
 .nav-links button {
   background: none;
   border: none;
-  color: #d5dce1;
+  color: black;
   font-size: 17px;
   font-family: inherit;
   cursor: pointer;
@@ -63,7 +64,15 @@
 
 .nav-book-button:hover {
   background: white;
+  color: #111f2a;
   transform: translateY(-2px);
+}
+
+.nav-links button:focus-visible,
+.navbar h2:focus-visible,
+.nav-book-button:focus-visible {
+  outline: 2px solid #00d4b5;
+  outline-offset: 4px;
 }
 
 /* Tablet and mobile */
@@ -95,12 +104,31 @@
   }
 }
 
+@media (max-width: 850px) {
+  .navbar {
+    padding: 18px 5%;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .navbar h2 {
+    font-size: 26px;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: clamp(14px, 4vw, 24px);
+  }
+}
+
 @media (max-width: 400px) {
   .nav-links {
-    gap: 12px;
+    gap: 10px;
   }
 
   .nav-links button {
-    font-size: 14px;
+    font-size: 13px;
   }
 }

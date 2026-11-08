@@ -15,7 +15,7 @@
 
 .moving-container .back-link {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 8px;
   font-size: 13px;
   cursor: pointer;
@@ -163,6 +163,56 @@
   font-size: 18px;
 }
 
+.moving-price-guide {
+  background: #1b2b36;
+  border: 1px solid #35434d;
+  border-radius: 10px;
+  margin-top: 40px;
+  padding: 24px;
+}
+
+.moving-price-guide h2,
+.moving-price-guide h3 {
+  color: #00d4b5;
+  margin: 0 0 12px;
+}
+
+.moving-price-guide h3 {
+  margin-top: 24px;
+}
+
+.moving-price-guide p {
+  color: #b5c0c8;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.moving-price-guide ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.moving-price-guide li {
+  border-bottom: 1px solid #35434d;
+  color: #b5c0c8;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+.moving-price-guide li:last-child {
+  border-bottom: 0;
+}
+
+.moving-price-guide li strong {
+  color: white;
+  text-align: right;
+  white-space: nowrap;
+}
+
 /* Hide mobile image on desktop */
 
 .moving-mobile-image {
@@ -185,6 +235,34 @@
     height: 350px;
   }
 
+}
+
+@media (max-width: 800px) {
+  .moving-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .moving-left {
+    padding: 0;
+  }
+
+  .moving-right {
+    display: none;
+  }
+
+  .moving-mobile-image {
+    display: block;
+    margin-top: 25px;
+  }
+
+  .moving-mobile-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(0.8);
+  }
 }
 
 /* Mobile screens */
@@ -241,9 +319,29 @@
 /* Small phones */
 
 @media (max-width: 380px) {
+  .moving-container {
+    padding: 22px 16px;
+  }
+
+  .moving-price-guide {
+    padding: 16px;
+  }
+
+  .moving-price-guide li {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .moving-price-guide li strong {
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
 
   .moving-left h1 {
     font-size: 25px;
+    overflow-wrap: anywhere;
   }
 
   .moving-left h2 {
