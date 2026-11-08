@@ -44,6 +44,8 @@ function App() {
     if (!supabase) return undefined;
 
     let active = true;
+    let authChangeCount = 0;
+    const initialAuthChangeCount = authChangeCount;
     const isPasswordReset = () =>
       new URLSearchParams(window.location.search).get("page") === "resetPassword";
     const routeForUser = async (authUser) => {
@@ -64,7 +66,7 @@ function App() {
     };
 
     supabase.auth.getSession().then(({ data, error }) => {
-      if (!active) return;
+      if (!active || authChangeCount !== initialAuthChangeCount) return;
       if (error) {
         setAuthError(`Unable to restore your Supabase session: ${error.message}`);
         return;
@@ -79,7 +81,7 @@ function App() {
         if (!isPasswordReset()) setPage("home");
       }
     }).catch((error) => {
-      if (active) {
+      if (active && authChangeCount === initialAuthChangeCount) {
         signOutDemoUser();
         if (!isPasswordReset()) setPage("home");
         setAuthError(error instanceof Error ? error.message : "Unable to restore your Supabase session.");
@@ -90,9 +92,10 @@ function App() {
       if (!active) return;
       if (event === "PASSWORD_RECOVERY" || isPasswordReset()) return;
 
-      if (session?.user) {
-        routeForUser(session.user);
+      if (event === "SIGNED_IN" && session?.user) {
+        authChangeCount += 1;
       } else if (event === "SIGNED_OUT") {
+        authChangeCount += 1;
         signOutDemoUser();
         setPage("home");
       }
